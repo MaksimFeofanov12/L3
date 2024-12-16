@@ -1,34 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <?php
 
-include "App.php"
+    include "App.php";
 
-// Создание объекта и тестирование магических методов
-echo "<h2>Пример использования магических методов:</h2>";
+    // Создание объекта и тестирование магических методов
+    echo "<h2>Пример использования магических методов:</h2>";
 
-$obj = new MagicMethodsExample();  // Вызов конструктора
-echo "<br>";
+    $obj = new MagicMethodsExample();  // Вызов конструктора
+    echo "<br>";
 
-$obj->nonExistentMethod('arg1', 'arg2');  // Вызов несуществующего метода
-echo "<br>";
+    $obj->nonExistentMethod('arg1', 'arg2');  // Вызов несуществующего метода
+    echo "<br>";
 
-$obj->nonExistentProperty = 'Some Value';  // Присваивание несуществующего свойства
-echo "<br>";
+    $obj->nonExistentProperty = 'Some Value';  // Присваивание несуществующего свойства
+    echo "<br>";
 
-echo isset($obj->nonExistentProperty) ? 'Свойство существует' : 'Свойство не существует';  // Проверка на существование свойства
-echo "<br>";
+    echo isset($obj->nonExistentProperty) ? 'Свойство существует' : 'Свойство не существует';  // Проверка на существование свойства
+    echo "<br>";
 
-unset($obj->nonExistentProperty);  // Удаление несуществующего свойства
-echo "<br>";
+    unset($obj->nonExistentProperty);  // Удаление несуществующего свойства
+    echo "<br>";
 
-echo $obj;  // Преобразование объекта в строку
-echo "<br>";
+    echo $obj;  // Преобразование объекта в строку
+    echo "<br>";
 
-MagicMethodsExample::staticMethod('staticArg1');  // Вызов статического метода
-echo "<br>";
+    MagicMethodsExample::staticMethod('staticArg1');  // Вызов статического метода
+    echo "<br>";
 
-$clonedObj = clone $obj;  // Клонирование объекта
-echo "<br>";
+    $clonedObj = clone $obj;  // Клонирование объекта
+    echo "<br>";
 
-unset($obj);  // Уничтожение объекта
+    unset($obj);  // Уничтожение объекта
 
 ?>
+</body>
+</html>
